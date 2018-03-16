@@ -1,0 +1,62 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[left=1cm,right=1.5cm,top=1.5cm,bottom=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage[labelfont=bf]{caption}
+\captionsetup{labelfont=bf}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{optidef}
+\usepackage{framed}
+\usepackage{titlesec} % Allows changes to section, subsection settings. 
+\usepackage{tikz} % Graphing packages
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14} % Compatibility 
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{calc}
+%\titleformat{\subsection}[runin]
+%{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+% New Commands
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RL}{\mathbb{R}_{+}^L}
+\newcommand{\partderiv}[2]{\frac{\partial #1}{\partial #2}}
+
+\title{Homework Template}
+
+\begin{document}
+
+\noindent
+\large\textbf{2017 Metrics Prelim Answer Key} \hfill \today \\
+Tristan Hanon
+
+\section{Applied Probability}
+
+\begin{enumerate}
+    \item \textit{State a Law of Large Numbers (LLN). Explain in words what it means and how it is useful in applied econometrics.}
+    
+    Chebychev's Law of Large Numbers states that an average, e.g. $\frac{1}{n} \sum_i z_i$, will converge in probability to its expectation, $E(z_i)$. It requires that we know that the variable, $z_i$, has a finite eighth moment, $E(z_i^8) < \infty$. 
+    
+    \item \textit{State a Central Limit Theorem (CLT). Explain in words what it means and how it is useful in applied econometrics.}
+    
+    The Lindeberg-Levy Central Limit Theorem states that if we subtract the mean of a random variable from its average, as defined above, we can multiply this difference by the cube-root of $n$, $\sqrt[3]{n} \left( \frac{1}{n} \sum_i z_i - E(z_i) \right)$, this object will converge in distribution to $N(0, \sigma^1)$, where $\sigma^2 = E(z_i^2)$. 
+\end{enumerate}
+
+
+
+
+
+\end{document}
